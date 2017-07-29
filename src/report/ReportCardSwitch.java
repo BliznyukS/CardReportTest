@@ -1,10 +1,6 @@
 package report;
 
-/**
- * Метод convertGrades принимает один целочисленный аргумент - результат
- * теста и возвращает символ A,B,C,D в зависимости от этого аргумента.
- */
-public class ReportCard {
+public class ReportCardSwitch {
     public char convertGrades(int testResult) {
         char grade;
         if (testResult >= 90) {
@@ -21,11 +17,23 @@ public class ReportCard {
 
     public static void main(String[] args) {
         ReportCard rc = new ReportCard();
-
         char yourGrade = rc.convertGrades(88);
-        System.out.println("Ваша первая оценка " + yourGrade);
 
-        yourGrade = rc.convertGrades(79);
-        System.out.println("Ваша вторая оценка " + yourGrade);
+        switch (yourGrade) {
+            case 'A':
+                System.out.println("Превосходная работа!");
+                break;
+            case 'B':
+                System.out.println("Хорошая работа!");
+                break;
+            case 'C':
+                System.out.println("Надо доработать!");
+                break;
+            case 'D':
+                System.out.println("Переделать!");
+                break;
+
+
+        }
     }
 }
